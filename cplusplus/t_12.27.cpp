@@ -1,23 +1,22 @@
 #include<iostream>
-using namespace std;
-void sortbyuse(vector<int>&v,int n);
+void sortbyuse(std::vector<int>&v,int n);
 int main()
 {
     int n;
-    cin>>n;
-    vector<int>vi(n);
+    std::cin>>n;
+    std::vector<int>vi(n);
     for(int i=0;i<n;i++)
     {
-        cin>>vi[i];
+        std::cin>>vi[i];
     }
     sortbyuse(vi,n);
     for(int i=0;i<n;i++)
     {
-        cout<<vi[i];
+        std::cout<<vi[i];
     }
     return 0;
 }
-void sortbyuse(vector<int>&v,int n)
+void sortbyuse(std::vector<int>&v,int n)
 {
     for(int i=0;i<n-1;i++)
     {
