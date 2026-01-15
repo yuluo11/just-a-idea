@@ -1,5 +1,9 @@
+#ifndef T_13
+#define T_13
+
 #include<iostream>
 #include<string>
+
 using std::istream;
 using std::ostream;
 data_item add(const data_item&,const data_item);
@@ -18,13 +22,17 @@ public:
     data_item(std::istream&);
     std::string isbn()const{return bookNo;}
     data_item&combine(const data_item&);
-    double avg_price()const;
+    inline double avg_price()const;
 private:
     std::string bookNo;
     unsigned units_sold=0;
     double revenue=0.0;
 };
 
+
+
+
+inline
 double data_item::avg_price() const
 {
     if(units_sold)
@@ -63,3 +71,6 @@ data_item add(const data_item& lhs, const data_item& rhs)
     sum.combine(rhs);
     return sum;
 }
+
+#endif
+
